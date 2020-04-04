@@ -1249,8 +1249,12 @@ class MWSClient{
                 )
             );
 
-            $requestOptions['query'] = $query;
-            
+            if(isset($endPoint['form_params']) && $endPoint['form_params']) {
+                $requestOptions['form_params'] = $query;
+            } else {
+                $requestOptions['query'] = $query;
+            }
+
             if($this->client === NULL) {
                 $this->client = new Client();
             }

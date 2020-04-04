@@ -144,7 +144,8 @@ class MWSEndPoint{
             'method' => 'POST',
             'action' => 'GetLowestPricedOffersForASIN',
             'path' => '/Products/2011-10-01',
-            'date' => '2011-10-01'
+            'date' => '2011-10-01',
+            'form_params' => true,
         ]
     ];
 
